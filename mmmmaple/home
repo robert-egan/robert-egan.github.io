@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>mmmmmMaple Glazed Donuts</title>
+	<meta name="description" 
+	content="This page is dedicated to appreciating delicious fried dough">
+	<meta charset="utf-8">
+	<!--To get practice with HTML5 and Inline CSS, I made this basic webpage dedicated
+	to a favorite treat of mine, the maple glazed donut. Robert Egan 9/15/18-->
+</head>
+<body style="background-color:#ECC5A8;">
+<header style="color:#7F5417;">
+<h1 style="text-align:center; font-weight:bold;">Maple Glazed Donuts</h1>
+<h2 style="text-align:center; font-style:italic;">More Than Old-Fashioned</h2>
+</header>
+<section><h2>All About The Maple</h2>
+<article><h3>Whats The Big Deal?</h3>
+<p>Maple differs significantly from the pure unhindered sugar rush of the other glazes.
+ A good maple donut delivers to the consumer a delightful sweetness with a hint
+ of saltiness to make for a perfectly balanced treat. 
+ <br>
+ <br>
+ A recent trend has been to take the savory factor one step further by incorporating
+  bacon.
+</p>
+<figure>
+	<img src="donut.jpg" alt="Maple Bar with Bacon" style="border:solid #7F5417 3px;">
+	<figcaption>Maple Bar w/Bacon from VooDoo Donuts in Portland, OR. <br>Photo courtesy of
+	<a href="https://www.flickr.com/photos/51035597937@N01" target="_blank">Mike McCune
+	</a>
+	</figcaption>
+</figure>
+<hr>
+<h3>Where To Go</h3>
+<p>While maple varieties are available through many purveyors of fried goodness, some of 
+the most sought after maple donuts are found at <a href="http://www.bobsdonutssf.com/#home1"
+ target="_blank">Bob's Donuts</a> on Polk St. and 
+ <a href="http://the-jelly-donut-san-francisco.sites.tablehero.com/" target="_blank">
+ The Jelly Donut</a> on 24th St. It is not uncommon to see a line out the door at Bob's 
+ on a Saturday morning.
+</p>
+<figure>
+	<img src="bob.JPG" alt="Maple Old-Fashioned from Bob's Donuts" 
+	style="border:solid #7F5417 3px;">
+	<figcaption>Maple-Glazed Old-Fashioned from Bob's Donuts in San Francisco, CA.
+	<br> Photo courtesy of Robert Egan
+	</figcaption>
+</figure>
+</article>
+<hr>
+<article><h3>Have It Your Way</h3>
+<p>There is a common misconception that the beloved maple glaze is only available on the
+old-fashioned variety of donut. While the old-fashioned is a tried and true vehicle for
+maple consumption, and many a maple aficionado have been known to not stray far from it,
+this is simply not true. Maple glaze is typically available in a variety of formats.
+</p>
+<h4>Including:</h4>
+<ul>
+	<li>Old-Fashioned</li>
+	<li>Raised</li>
+	<li>Cake</li>
+	<li>Buttermilk Bar</li>
+	<li>Bar-Unfilled</li>
+	<li>Bar-Filled</li>
+	<li>French Cruller</li>
+	<li>Twist</li>
+	<li>Vegan</li>
+</ul>
+<p>The exception however, is sprinkles. While sprinkles are considered a core component 
+for many donut consumers, particularly among the youth, sprinkles paired with maple glaze
+is seen as highly unorthodox as they distort the aforementioned balance of sweet and salty.
+</p>
+</article>
+</section>
+<footer>
+Copyright &copy; Robert Egan 
+<a href="https://www.ccsf.edu/" target="_blank"> City College of San Francisco </a>
+</footer>
+</body>
+
+
+
+
+</html>
