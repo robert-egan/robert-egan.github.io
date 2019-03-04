@@ -1,0 +1,42 @@
+@keyframes bouncing
+{
+0%   {left: 0px; top:-75px;}
+10%  {left:calc(10% - 40px); top:100px;}
+20%  {left:calc(20% - 40px); top: -50px;}
+30%  {left:calc(30% - 40px); top: 100px;}
+40%  {left:calc(40% - 40px); top: 0px;}
+50% {left:calc(50% - 40px);top: 100px;}
+60% {left:calc(60% - 40px);top: 0px;}
+70% {left:calc(70% - 40px);top: 100px;}
+85% {left:calc(80% - 40px);top: -75px;}
+100% {left:calc(90% - 40px);top: 125px;}
+}
+
+#donut
+{
+    border: 20px ridge tan;
+    border-radius: 50%;
+    height:40px;
+    width:40px;
+    position: relative;
+    animation-name: bouncing;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-direction:normal ;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+#trapezoid 
+{
+    position: relative; 
+    left: 83%;
+    top: 100px;
+    border-top: 120px solid whitesmoke;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 70px;
+    
+    
+}
