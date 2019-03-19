@@ -1,0 +1,80 @@
+body
+{
+    background-color: yellow;
+}
+
+h1
+{
+    text-align: center;
+    color: red;
+}
+h2
+{
+    text-align: right;
+    color: blue;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+h3
+{
+    text-align: right;
+    color: red;
+}
+p::first-letter
+{
+    font-size: 3em;
+    font-style: italic;
+    font-weight: bold;
+}
+.red
+{
+    color: red
+}
+.big
+{
+    font-size: 3em;
+}
+a:link
+{
+    color: red;
+}
+a:visited
+{
+    color: white;
+}
+table
+{
+    animation-name: table;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    border-spacing: 5px;
+}
+td
+{
+    padding: 10px;
+}
+td:first-child
+{
+    text-align: center;
+    font-weight: bold;
+}
+@keyframes table
+{
+    from {background-color: cyan; color:black}
+    to {background-color: green; color:white}
+}
+@keyframes banner
+{
+    from {left:calc(0%)}
+    to {left:calc(82%)}
+}
+#banner
+{
+    width: calc(20%);
+    position: relative;
+    animation-name: banner;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
