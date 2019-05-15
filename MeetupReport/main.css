@@ -1,0 +1,57 @@
+body
+{
+    background-color: #BCDDDE;
+    margin:20px;
+}
+h1
+{
+    text-align: center;
+    background-color: cadetblue;
+    padding: 10px;
+    width: 30%;
+    position: relative;
+    left: 35%;
+    border: 10px solid #02484B;
+}
+figure
+{
+    flex-basis: 250;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.image1 
+{
+    width: 200px;
+    height: 250px;
+    position: relative;
+    float: left;
+       
+}
+.image2 
+{
+    width: 250px;
+    height: 200px;
+    transform: rotate(90deg);
+    position: relative;
+    float: left;
+    top: 40px;
+    
+}
+div
+{
+    display: flex;
+    height: 275px;
+    background-color: cadetblue;
+    overflow: auto;
+    border: 15px solid #02484B;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    
+}
+
+p 
+{
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 1.1em;
+}
