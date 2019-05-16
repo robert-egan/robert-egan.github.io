@@ -1,0 +1,62 @@
+<! DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pacific Trail Resorts</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Form for making reservation requests at Pacific Trail Resorts">
+        <meta name="viewport" content="width=480px, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="pacific.css">
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="grid">
+                <h1 id="heading">Pacific Trails Resort</h1>
+                <div id="nav">
+                    <ul id="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="yurts.html">Yurts</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                    </ul>
+                </div>
+                <div id="content">
+                    <h2>Reservations</h2>
+                    <form action="contact.php" method="get">
+                        <label for="fName">First Name:</label><input type="text" placeholder="First Name" required name="fName" id="fName" size="50" max="45"><br>
+                        <br>
+                        <label for="lName">Last Name: </label><input type="text" placeholder="Last Name" required name="lName" id="lName" size="50" max="45"><br>
+                        <br>
+                        <label for="email">Email: &emsp;&emsp;</label><input type="text" placeholder="Email" required name="email" id="email" size="50" max="45"><br>
+                        <br>
+                        <label for="phone">Phone Number:</label><input type="tel" placeholder="Phone Number" required name="phone" id="phone" size="25" max="15"><br>
+                        <br>
+                        <label for="guests">Number of Guests</label>
+                        <br>
+                            <select id="guests">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                            </select><br>
+                        <br>
+                        <label for="comments">Comments: </label><textarea cols="40" rows="5" placeholder="Please provide any additional information or questions."></textarea><br>
+                        <br>
+                        <input type="submit" value="Submit Reservation"> <input type="reset" value="Clear Form">
+                     </form>
+                    <div id="footer">
+                        <p>
+                            Copyright &copy; 2011 Pacific Trails Resort<br>
+                            <em>Robert Egan</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
