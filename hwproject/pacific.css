@@ -133,6 +133,7 @@ a:hover
 #bird
 {
     position: relative;
+    width: 70px;
     padding-top: 30px;
     animation-name: birdie;
     animation-duration: 5s;
