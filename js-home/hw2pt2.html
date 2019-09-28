@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="An end of semester grade calculator.">
+        <title>Sales Commission Calculator</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" defer></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+        <script src="hw2pt2.js" defer></script>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="hw2pt1.html">PART1</a></li>
+            <li><a href="hw2pt3.html">PART3</a></li>
+        </ul>
+        <main>
+            <h1>Sales Commission Calculator</h1>
+            <h2>Enter the salesperson's name and sales data below.</h2>
+            <form>
+                <table align="center">
+                    <tr>
+                        <td><label for="name">Sales Associate: </label></td>
+                        <td><input type="text" name="name" id="name" title="Please make sure the associate's name is spelled correctly"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="item1">Item 1 : </label></td>
+                        <td><input type="number" name="item1" id="item1" class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="item2">Item 2 : </label></td>
+                        <td><input type="number" name="item2" id="item2" class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="item3">Item 3 : </label></td>
+                        <td><input type="number" name="item3" id="item3" class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="item4">Item 4 : </label></td>
+                        <td><input type="number" name="item4" id="item4" class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="SUBMIT" name="submit" id="submit"></td>
+                        <td><input type="reset" value="RESET"></td>
+                    </tr>
+                </table>
+                <hr>
+                <table align="center" id="btmTable">
+                    <tr>
+                        <th>Item #</th><th>Price</th><th>Units Sold</th><th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>1</td><td>$239.99</td><td><input type="text" id="item1_val" name="item1_val" readonly class="I2"></td><td><input type="text" id="item1_total" name="item1_total" readonly class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>$129.75</td><td><input type="text" id="item2_val" name="item2_val" readonly class="I2"></td><td><input type="text" id="item2_total" name="item2_total" readonly class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>$99.95</td><td><input type="text" id="item3_val" name="item3_val" readonly class="I2"></td><td><input type="text" id="item3_total" name="item3_total" readonly class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td>$350.89</td><td><input type="text" id="item4_val" name="item4_val" readonly class="I2"></td><td><input type="text" id="item4_total" name="item4_total" readonly class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total Amount Sold: </td><td><input type="text" name="weekTotal" id="weekTotal" readonly class="I2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total Week's Earnings: </td><td><input type="text" name="commTotal" id="commTotal" readonly class="I2"></td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+    </body>
+</html>

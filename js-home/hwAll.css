@@ -3,17 +3,12 @@ body
     background-color: #F1EAC3;
     padding: 25px;
 }
-h1
+h1 , h2, h4
 {
     text-align: center;
     color: #003049;
 }
-h2
-{
-    text-align: center;
-    color: #003049;
-}
-ul
+.nav
 {
     background-color: #B45D00;
     display: flex;
@@ -29,15 +24,19 @@ ul
     text-decoration: underline;
     
 }
-a
+td
 {
-    text-decoration: none;
-    color: #B89B65;
-    
+    text-align: center;
+    padding: 5px;
 }
-a:visited
+.I1
 {
-    color: #B89B65;
+    padding: 10px 20px;
+}
+.I2
+{
+    text-align: right;
+    
 }
 ul a
 {
@@ -86,7 +85,17 @@ footer
     justify-content: space-around;
     border-radius: 50px/25px;
 }
-#item1
+.home a
+{
+    text-decoration: none;
+    color: #B89B65;
+    
+}
+.home a:visited
+{
+    color: #B89B65;
+}
+#header1
 {
     flex: 1 100%;
     text-decoration: underline;
@@ -101,6 +110,10 @@ footer
     text-align: center;
     border: solid 3px #B45D00;
     
+}
+#btmTable
+{
+    padding-bottom: 15px;
 }
 .mobile
 {

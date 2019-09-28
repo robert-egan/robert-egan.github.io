@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="An end of semester grade calculator.">
+        <title>Temperature Convertor</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+        <script>
+            function cToF(tempC){
+                return (9/5 * tempC) + 32;
+            }
+            function ftoC(tempF){
+                return 5/9 * (tempF - 32);
+            }
+            function convertToF(){
+                var F, C;
+                C = document.getElementById("C").value;
+                if(isNaN(C)){
+                    window.alert("Invalid value given for Celsius")
+                }
+                else{
+                    C = parseInt(C);
+                    F = cToF(C);
+                    document.getElementById("F").value = F;
+                }
+            }
+            function convertToC(){
+                var F,C;
+                F = document.getElementById("F").value;
+                if(isNaN(F)){
+                    window.alert("Invalid value given for Fahrenheit")
+                }
+                else{
+                    F = parseInt(F);
+                    C = ftoC(F);
+                    document.getElementById("C").value = C;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="hw2pt1.html">PART1</a></li>
+            <li><a href="hw2pt2.html">PART2</a></li>
+        </ul>
+        <main>
+            <h1>Temperature Converter</h1>
+            <h4>Enter value to be converted below</h4>
+            <form>
+                <table align="center">
+                    <tr>
+                        <th><label for="C">Celsius</label></th><th><label for="F">Fahrenheit</label></th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="C" id="C"></td><td><input type="number" name="F" id="F"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Convert to &#8451;" onclick="convertToC();"></td> <td><input type="button" value="Convert to &#8457" onclick="convertToF();"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="reset" value="RESET"></td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="An end of semester grade calculator.">
+        <title>Grade Calculator</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+        <script >
+            //R will designate the raw or unparsed variables
+            var avg, avgR, mid, midR, final, finalR, part, partR, total;
+                
+            
+            function validateInput(){
+                /*
+                * I realize that performing all of this validation on my inputs which have the attribute type number is perhaps excessive but I wanted to practice using
+                the isNaN() method.
+                */
+                var isValid = true;
+                var rawValues = [avgR, midR, finalR, partR];
+                for(value in rawValues){
+                    if(isNaN(rawValues[value])){
+                        isValid = false;
+                    }
+                }
+                if(isValid){
+                    avg = parseInt(avgR);
+                    mid = parseInt(midR);
+                    final = parseInt(finalR);
+                    part = parseInt(partR);
+                
+                    var values = [avg, mid, final, part]
+                    for(num in values){
+                        if((values[num] < 0) || (values[num] > 100)){
+                            isValid = false;
+                        }
+                    }
+                }
+                return isValid;
+            }
+            function calcGrade() {
+                avgR = document.getElementById("avg").value;
+                midR = document.getElementById("mid").value;
+                finalR = document.getElementById("final").value;
+                partR = document.getElementById("participation").value;
+                var validated = validateInput();
+                if(validated){
+                    total = Math.floor((.5*avg)+(.2*mid)+(.2*final)+(.1*part));
+                    var msg = "Your final average was: " + total + "\nYour grade for the semester is:"
+                    if(total >= 90){
+                        document.getElementById("results").value = msg + " A";
+                    }
+                    else if(total >= 80){
+                        document.getElementById("results").value = msg + " B";
+                    }
+                    else if(total >= 70){
+                        document.getElementById("results").value = msg + " C";
+                    }
+                    else {
+                        document.getElementById("results").value = "Your final average was not high enough to pass, you must retake the course."
+                    }
+                }
+                else{
+                    document.getElementById("results").value = "Some of the inputted values were not valid or were outside of the possible range, please try again."
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="hw2pt2.html">PART2</a></li>
+            <li><a href="hw2pt3.html">PART3</a></li>
+        </ul>
+        <main>
+            <h1>Student Grades</h1>
+            <h4>Input the scores for each of the categories below.</h4>
+            <form name="grade-form">
+                <table align="center">
+                    <tr>
+                        <td>
+                            <label for="avg">Homework Average:</label> 
+                        </td>
+                        <td>
+                            <label for="mid">Mid-Term Exam Score:</label>
+                        </td>
+                        <td>
+                            <label for="final">Final Exam Score:</label>
+                        </td>
+                        <td>
+                            <label for="participation">Participation:</label> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" class="I1" name="avg" id="avg" required>
+                        </td>
+                        <td>
+                            <input type="number" class="I1" name="mid" id="mid" required>
+                        </td>
+                        <td>
+                            <input type="number" class="I1" name= "final" id="final" required>
+                        </td>
+                        <td>
+                            <input type="number" class="I1" name="participation" id="participation" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="SUBMIT" onclick="calcGrade();">  
+                        </td>
+                        <td>
+                            <input type="reset" value="RESET">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <textarea name="results" id="results" readonly cols="50" rows="3"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+    </body>
+</html>
