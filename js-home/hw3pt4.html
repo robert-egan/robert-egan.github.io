@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT-133 Assignment 3: Part 4">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Homework 3.4</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="hw3.html">HW3</a></li>
+            <li><a href="hw3pt1.html">PART1</a></li>
+            <li><a href="hw3pt2.html">PART2</a></li>
+            <li><a href="hw3pt3.html">PART3</a></li>
+        </ul>
+        <main id="center">
+            <h1>Search for a State!</h1>
+            <hr>
+            <p id="errorField"></p>
+            <form>
+                <table id="states">
+                    <tr>
+                        <td><label for="search">State Name or Abbreviation: </label></td>
+                        <td><input type="text" name="search" id="search"></td>
+                        <td><input type="button" value="State Info" onclick="findState();"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="abbr">Abbreviation: </label></td>
+                        <td><input type="text" name="abbr" id="abbr" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">State Name: </label></td>
+                        <td><input type="text" name="name" id="name" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="capital">Capital: </label></td>
+                        <td><input type="text" name="capital" id="capital" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pop">Population: </label></td>
+                        <td><input type="text" name="pop" id="pop" readonly></td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+        <script>
+            /*
+            * Rather than use a 2D array, I wanted to get some practice working with an 
+            * array of JS objects.
+            */
+            var alabama = {abbr : "AL", name : "Alabama", capital: "Montgomery", pop: 4887871}
+            var alaska = {abbr : "AK", name : "Alaska", capital: "Juneau", pop: 737438}
+            var arizona = {abbr : "AZ", name : "Arizona", capital : "Phoenix", pop: 7171646}
+            var arkansas = {abbr : "AR", name : "Arkansas", capital: "Little Rock", pop: 3010825}
+            var california = {abbr: "CA", name: "California", capital: "Sacramento", pop: 39557045}
+            var colorado = {abbr: "CO", name: "Colorado", capital: "Denver", pop: 5694564}
+            var states = [alabama, alaska, arizona, arkansas, california, colorado];
+            
+            function findState(){
+                clearFields();
+                var input = document.getElementById("search").value;
+                input = input.toLowerCase();
+                var found = false;
+                for ( let state of states){
+                    console.log(state);
+                    if(input==state.abbr.toLowerCase() || input==state.name.toLowerCase()){
+                        found = true;
+                        document.getElementById("abbr").value = state.abbr;
+                        document.getElementById("name").value = state.name;
+                        document.getElementById("capital").value = state.capital;
+                        document.getElementById("pop").value = state.pop.toLocaleString();
+                    }
+                }
+                if(!found){
+                    document.getElementById("errorField").innerHTML = "That state was not found, please try again."
+                }
+            }
+            function clearFields(){
+                document.getElementById("errorField").innerHTML = "";
+                document.getElementById("abbr").value = "";
+                document.getElementById("name").value = "";
+                document.getElementById("capital").value = "";
+                document.getElementById("pop").value = "";
+            }
+        </script>
+    </body>

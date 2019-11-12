@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT-133 Assignment 3: Part 1">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Homework 3.1</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="hw3.html">HW3</a></li>
+            <li><a href="hw3pt2.html">PART2</a></li>
+            <li><a href="hw3pt3.html">PART3</a></li>
+            <li><a href="hw3pt4.html">PART4</a></li>
+        </ul>
+        <main>
+            <h1>Sum and Product</h1>
+            <h2>Drag Elements Wherever You Like!</h2>
+            <hr>
+            <p id="for1"></p>
+            <p id="for2"></p>
+            <p id="while1"></p>
+            <p id="while2"></p>
+        </main>
+        
+        <script>
+            var sumMsg1 = ""; 
+            var sumMsg2 = "";
+            var productMsg1 = ""; 
+            var productMsg2 = "";
+            var sum1 = 0;
+            var sum2 = 0;
+            var product1 = 1;
+            var product2 = 1;
+            var whileCounter = 3;
+            
+            for(let i=5;i<=20;i+=3){
+                sum1 += i;
+                product1 *= i;
+                if(i==20){
+                    sum1 = sum1.toLocaleString();
+                    product1 = product1.toLocaleString();
+                    sumMsg1 += i + " = " + sum1;
+                    productMsg1 += i + " = " + product1;
+                }
+                else{
+                    sumMsg1 += i + " + ";
+                    productMsg1 += i + " * ";
+                }
+            }
+            
+            while(whileCounter<=31){
+                sum2 += whileCounter;
+                product2 *= whileCounter;
+                if(whileCounter == 31){
+                    sum2 = sum2.toLocaleString();
+                    product2 = product2.toLocaleString();
+                    sumMsg2 += whileCounter + " = " + sum2;
+                    productMsg2 += whileCounter + " = " + product2;
+                }
+                else{
+                    sumMsg2 += whileCounter + " + ";
+                    productMsg2 += whileCounter + " * ";
+                }
+                whileCounter +=4
+            }
+            document.getElementById("for1").innerHTML = sumMsg1;
+            document.getElementById("for2").innerHTML = productMsg1;
+            document.getElementById("while1").innerHTML = sumMsg2;
+            document.getElementById("while2").innerHTML = productMsg2;
+        </script>
+        <script>
+            $(function(){
+                $("*").draggable();
+                
+            })
+        </script>
+    </body>

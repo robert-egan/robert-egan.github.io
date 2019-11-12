@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT-133 Assignment 3: Part 2">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Homework 3.2</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="hw3.html">HW3</a></li>
+            <li><a href="hw3pt1.html">PART1</a></li>
+            <li><a href="hw3pt3.html">PART3</a></li>
+            <li><a href="hw3pt4.html">PART4</a></li>
+        </ul>
+        <main>
+            <h1>Donut Order Form</h1>
+            <hr>
+            <br>
+            
+            <form id="donutForm" action="hw3pt2OrderComplete.html"  onsubmit="return validate();" method="post">
+                <p id="errorField"></p>
+                <label for="custName" id="custName">Name for the order:</label><input id="custName" name="custName" type="text"><br><br>
+                <label for="orderType">Type of Donut:</label><br>
+                <input type="radio" name="orderType" value="Old-Fashioned" checked>Old-Fashioned<br>
+                <input type="radio" name="orderType" value="Raised">Raised<br>
+                <input type="radio" name="orderType" value="Cake">Cake<br>
+                <input type="radio" name="orderType" value="Crueller">Crueller<br><br>
+                <label for="options">Options:</label><br>
+                <input type="checkbox" name="option" value="Variety">Assorted Types<br>
+                <input type="checkbox" name="option" value="Sprinkles">Sprinkles<br>
+                <input type="checkbox" name="option" value="Glazed">Glazed<br>
+                <input type="checkbox" name="option" value="Maple">Maple<br>
+                <input type="checkbox" name="option" value="Chocolate">Chocolate<br><br>
+                <label for="quantity">Quantity:</label><br>
+                <select name="quantity" id="quantity">
+                    <option value="">Desired Quantity</option>
+                    <option value="6">Half Dozen</option>
+                    <option value="12">One Dozen</option>
+                    <option value="24">Two Dozen</option>
+                </select>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <script>
+                function writeError(msg){
+                    document.getElementById("errorField").innerHTML = msg;
+                }
+                function validate(){
+                    var name = document.forms["donutForm"]["custName"].value;
+                    if(name == ""){
+                        writeError("You must submit a name for the order.")
+                        document.forms["donutForm"]["custName"].focus();
+                        return false;
+                    }
+                    var options = document.getElementsByName("option");
+                    var optionsSelected = 0;
+                    for(let i=0; i<options.length;i++){
+                        if(options[i].checked){
+                            optionsSelected++;
+                        }
+                    }
+                    if(optionsSelected == 0){
+                        writeError("You must select an option.")
+                        return false;
+                    }
+                    var select = document.getElementById("quantity");
+                    if(select.value == ""){
+                        writeError("Please select a quantity for your order")
+                        return false;
+                    }
+                   
+                }
+            </script>
+        </main>
+    </body>

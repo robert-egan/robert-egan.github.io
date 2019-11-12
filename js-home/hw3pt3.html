@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT-133 Assignment 3: Part 3">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Homework 3.3</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="hw3.html">HW3</a></li>
+            <li><a href="hw3pt1.html">PART1</a></li>
+            <li><a href="hw3pt2.html">PART2</a></li>
+            <li><a href="hw3pt4.html">PART4</a></li>
+        </ul>
+        <main id="center">
+            <form>
+                <h3>Check out some mountain bikes!</h3>
+                <select name="destList" onChange="goToPage(this.form);" >
+                    <option>Choose a bike:</option>
+                    <option value="https://surlybikes.com/bikes/krampus">Surly Krampus</option>
+                    <option value="https://www.specialized.com/us/en/hardrock/p/22836">Specialized Hardrock</option>
+                    <option value="https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/trail-mountain-bikes/roscoe/roscoe-6/p/28501/?colorCode=tan">Trek Roscoe</option>
+                </select>
+            </form>
+            <form>
+                <h3>Check out some gravel bikes!</h3>
+                <select name="destList">
+                    <option value="https://www.bianchiusa.com/bikes/road/gravel/orso-sora/">Bianchi Orso</option>
+                    <option value="https://www.somafab.com/archives/product/wolverine30">SOMA Wolverine</option>
+                    <option value="https://salsacycles.com/bikes/fargo/2019_fargo_tiagra">Salsa Fargo</option>
+                </select>
+                <input type="button" onclick="goToPage(this.form);" value="GO!">
+            </form>
+        </main>
+        <script>
+            function goToPage(myForm){
+                var newPage = myForm.destList.options[myForm.destList.selectedIndex].value;
+                window.location = newPage;
+            }
+        </script>
+    </body>
