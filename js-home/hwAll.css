@@ -21,6 +21,7 @@ h1 , h2, h4
     font-size: 1.3em;
     padding-top: 12px;
     padding-bottom: 12px;
+    padding-left: 0px;
     text-decoration: underline;
     
 }
@@ -84,6 +85,7 @@ footer
     flex-flow: row wrap;
     justify-content: space-around;
     border-radius: 50px/25px;
+    min-height: 200px;
 }
 .home a
 {
@@ -115,9 +117,110 @@ footer
 {
     padding-bottom: 15px;
 }
+#errorField
+{
+    font-size: 1.2em;
+    color: red;
+    margin: 0px;
+    height: 25px;
+    padding-left: 0px;
+}
+
+#donutForm
+{
+    padding-left: 50px;
+    padding-bottom: 50px;
+    font-size: 1.1em;
+}
+#center
+{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+#states
+{
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-right: auto;
+}
 .mobile
 {
     display: none;
+}
+.summary
+{
+    text-align: center;
+    
+}
+.btnLink
+{
+    padding: 25px;
+    margin-top: 20px;
+    background-color: #003049;
+    color: #B89B65;
+    border-radius: 25px;
+    font-size: 1.1em;
+    z-index: -1;
+    border-color: #B45D00;
+}
+.btnLink:hover
+{
+    background-color: #5C7A8A;
+}
+
+.btnLink:focus
+{
+    outline: none;
+}
+.drop
+{
+    padding: 25px;
+    margin-top: 20px;
+    background-color: #003049;
+    color: #B89B65;
+    border-radius: 25px;
+    font-size: 1.1em;
+    z-index: -1;
+    border-color: #B45D00;
+}
+.drop:hover
+{
+    background-color: #5C7A8A;
+}
+.drop:focus
+{
+    outline: none;
+}
+.menu
+{
+    background-color: #C0C0C0;
+    font-size: 1.1em;
+    border-radius: 15px;
+    padding: 5px 0px 5px 25px;
+    margin: -10px 0px 20px 25px;
+    position: absolute;
+    min-width: 100px;
+    z-index: 2;
+    box-shadow: 1px 3px 5px 0px black;
+}
+
+.drop_item
+{
+    color: #003049;
+}
+.drop_item:visited
+{
+    color: #003049;
+}
+
+#drop_container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border-radius: 50px/25px;
+    min-height: 200px;
 }
 @media screen and (max-width:825px)
 {
@@ -135,7 +238,8 @@ footer
         text-decoration: none;
     }
     body{
-        padding-top: 0px;
+        padding: 0px 10px 20px 10px;
+        min-width: 95%;
     }
     .browser
     {
@@ -153,6 +257,7 @@ footer
     main
     {
         min-height: 250px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -167,5 +272,9 @@ footer
         display: flex;
         flex-direction: column;
         
+    }
+    form table
+    {
+        padding: 0px;
     }
 }

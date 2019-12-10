@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT-133 Assignment 3">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Homework 3</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".menu").hide();
+                $(".drop").click(function(){
+                    console.log(this);
+                    console.log($(this).next('.menu'));
+                    $(this).next('.menu').toggle();
+                })
+                $(".btnLink").click(function(){
+                    window.location = "index.html";
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="hw4.html">HW4</a></li>
+            <li><a href="hw4pt1.html">PART1</a></li>
+            <li><a href="hw4pt2.html">PART2</a></li>
+        </ul>
+        <main id="drop_container">
+            <div>
+                <button class="btnLink">Homework 1</button>
+            </div>
+            <div>
+                <button class="drop">Homework 2</button>
+                <div class="menu">
+                    <a href="hw2pt1.html" class="drop_item">Part 1</a><br>
+                    <a href="hw2pt2.html" class="drop_item">Part 2</a><br>
+                    <a href="hw2pt3.html" class="drop_item">Part 3</a>
+                </div>
+            </div>
+            <div>
+                <button class="drop">Homework 3</button>
+                <div class="menu">
+                    <a href="hw3pt1.html" class="drop_item">Part 1</a><br>
+                    <a href="hw3pt2.html" class="drop_item">Part 2</a><br>
+                    <a href="hw3pt3.html" class="drop_item">Part 3</a><br>
+                    <a href="hw3pt4.html" class="drop_item">Part 4</a>
+                </div>
+            </div>
+            <div>
+                <button class="drop">Homework 4</button>
+                <div class="menu">
+                    <a href="hw4pt1.html" class="drop_item">Part 1</a><br>
+                    <a href="hw4pt2.html" class="drop_item">Part 2</a><br>
+                    <a href="hw4pt3.html" class="drop_item">Part 3</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Site developed by Robert Egan</p>
+            <p>regan2@mail.ccsf.edu</p>
+            <p>Fun fact: I love <a href="https://robert-egan.github.io/mmmmaple/home.html">donuts!</a></p>
+        </footer>
+    </body>
+</html>

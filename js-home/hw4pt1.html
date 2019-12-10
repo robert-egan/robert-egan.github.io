@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT-133 Assignment 3">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Homework 4 Part 1</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+        <style>
+            form{padding: 50px;}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#phone').mask('(000) 000-0000');
+                $('#submit').click(function(){
+                    var phone = $('#phone').val();
+                    var phoneArray = phone.split(/[\(\)\- ]/);
+                    var area = phoneArray[1];
+                    console.log(phoneArray);
+                    $('#area').val(area);
+                    var number = phoneArray[3] + phoneArray[4];
+                    $('#number').val(number);
+                })
+                
+            });
+            
+        </script>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="hw4.html">HW4</a></li>
+            <li><a href="hw4pt2.html">PART2</a></li>
+            <li><a href="hw4pt3.html">PART3</a></li>
+        </ul>
+        <main class="home">
+            <form>
+                <h2>Know Your Area Code</h2>
+                <table>
+                    <tr>
+                        <td><label for="phone">Enter a phone number: </label></td>
+                        <td><input name="phone" id="phone" type="text"></td>
+                        <td><input type="button" value="SUBMIT" id="submit" name="submit"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="area">Area Code: </label></td>
+                        <td><input type="text" id="area" name="area" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">Personal Number: </label></td>
+                        <td><input type="text" id="number" name="number" readonly></td>
+                    </tr>
+                </table>
+            </form>
+           
+        </main>
+        <footer>
+            <p>Site developed by Robert Egan</p>
+            <p>regan2@mail.ccsf.edu</p>
+            <p>Fun fact: I love <a href="https://robert-egan.github.io/mmmmaple/home.html">donuts!</a></p>
+        </footer>
+    </body>
+</html>

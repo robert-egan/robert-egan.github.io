@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="CNIT-133 Assignment 3">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Homework 3</title>
+        <link rel="stylesheet" type="text/css" href="hwAll.css">
+        <style>
+            form{padding: 50px;}
+            .cursive{font-family: "Snell Roundhand", cursive;}
+            .fantasy{font-family: "Luminari", fantasy;}
+            .monospace{font-family: "Courier", monospace;}
+            .sans{font-family: "Helvetica", sans-serif;}
+            .serif{font-family: "Georgia", serif;}
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("#colorRandom").click(function(){
+                   /*
+                   I know this does not use the className property but I thought it was a fun idea, and I wanted to see if I could figure out how to make it work.
+                   */
+                   var red = Math.floor(Math.random() * 256);
+                   var green = Math.floor(Math.random() * 256);
+                   var blue = Math.floor(Math.random() * 256);
+                   var newColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+                   document.body.style.background = newColor;
+               });
+                $("#original").click(function(){
+                    document.body.style.background = "#F1EAC3";
+                });
+                $('input[type="radio"]').click(function(){
+                    document.body.className = this.id;
+                });
+                $("form :checkbox").change(function(){
+                    console.log($(this).attr("name"));
+                    $("body").css($(this).attr("name"), this.checked ? $(this).val() : "");
+                })
+            });
+            /*
+                I think that the font weight for the fantasy font I am using is bold by default because the bold checkbox has not effect when the fantasy font is selected.
+            */
+        </script>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a href="hw4.html">HW4</a></li>
+            <li><a href="hw4pt1.html">PART1</a></li>
+            <li><a href="hw4pt3.html">PART3</a></li>
+        </ul>
+        <main class="home">
+            <form>
+                <h2>Customize This Page</h2>
+                <table>
+                    <tr><td colspan="5"><label for="colors">Click to change the background color!</label></td></tr>
+                    <tr><td colspan="5"><input type="button" id="colorRandom" name="colors" value="Random Color"></td></tr>
+                    <tr><td colspan="5"><input type="button" id="original" name="colors" value="Reset Color"></td></tr>
+                    <tr><td colspan="5"><label for="font">Pick a Font Family below!</label></td></tr>
+                    <tr>
+                        <td><label>Cursive<input type="radio" value="Cursive" id="cursive" name="font"></label></td>
+                        <td><label>Fantasy<input type="radio" value="Fantasy" id="fantasy" name="font"></label></td>
+                        <td><label>Monospace<input type="radio" value="Monospace" id="monospace" name="font"></label></td>
+                        <td><label>Sans-Serif<input type="radio" value="Sans-Serif" id="sans" name="font"></label></td>
+                        <td><label>Serif<input type="radio" value="Serif" id="serif" name="font"></label></td>
+                    </tr>
+                    <tr><td colspan="5">Add Some Style to the Font!</td></tr>
+                    <tr>
+                        <td><label>Bold<input type="checkbox" name="font-weight" value="bold" id="bold"></label></td>
+                        <td><label>Italic<input type="checkbox" name="font-style" value="italic" id="italic"></label></td>
+                        <td><label>Bigger<input type="checkbox" name="font-size" value="1.5em" id="size"></label></td>
+                        <td><label>All Caps<input type="checkbox" name="font-variant" value="small-caps" id="caps"></label></td>
+                        <td><label>Shadow<input type="checkbox" name="text-shadow" value="3px 2px grey"></label></td>
+                    </tr>
+                </table>
+            </form>
+            
+        </main>
+        <footer>
+            <p>Site developed by Robert Egan</p>
+            <p>regan2@mail.ccsf.edu</p>
+            <p>Fun fact: I love <a href="https://robert-egan.github.io/mmmmaple/home.html">donuts!</a></p>
+        </footer>
+    </body>
+</html>

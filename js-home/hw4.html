@@ -7,6 +7,25 @@
         <title>Homework 4</title>
         <link rel="stylesheet" type="text/css" href="hwAll.css">
         <link rel="stylesheet" type="text/css" media="screen and (max-width: 825px)" href="hwMobile.css">
+        <style>
+            h2
+            {
+                cursor: default;
+            }
+            main
+            {
+                min-height: 350px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.summary').hide();
+                $('h2').click(function(){
+                    $(this).next('.summary').slideToggle('slow');
+                })
+            })
+        </script>
     </head>
     <body>
         <ul class="nav">
@@ -15,9 +34,15 @@
             <li><a href="hw3.html">HW3</a></li>
         </ul>
         <main>
-            <h1 class="browser">Homework 4 Coming Soon!</h1>
+            <h1 class="browser">Homework 4 - Objects, DOM, and Misc JQuery</h1>
             <h1 class="mobile">Homework 4</h1>
-            <h2 class="mobile">Coming Soon!</h2>
+            <h1 class="mobile">Objects, DOM, and Misc JQuery</h1>
+            <h2>Part 1</h2>
+            <p class="summary"><a href="hw4pt1.html">Phone Number Tool</a></p>
+            <h2>Part 2</h2>
+            <p class="summary"><a href="hw4pt2.html">Customizable Web Page</a></p>
+            <h2>Part 3</h2>
+            <p class="summary"><a href="hw4pt3.html">Homework Assignment Navigator</a></p>
         </main>
         <footer>
             <p>Site developed by Robert Egan</p>
