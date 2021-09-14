@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lost and Found Report</title>
+    <meta name="description"
+          content="Portfolio project for reporting items lost on SF Muni">
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+  </head>
+  <body>
+
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name="orgid" value="00D5f000002ZhCV">
+<input type=hidden name="retURL" value="http://rob-egan.com">
+
+<!--  ----------------------------------------------------------------------  -->
+<input type="hidden" name="debugEmail" value="rfegan2@gmail.com">       
+ <!--  ----------------------------------------------------------------------  -->
+
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+<label for="description">Description</label><textarea name="description"></textarea><br>
+
+Route:<select  id="00N5f000006oY0N" name="00N5f000006oY0N" title="Route"><option value="">--None--</option><option value="Not Applicable/Unknown">Not Applicable/Unknown</option>
+<option value="E - Embarcadero">E - Embarcadero</option>
+<option value="F - Market and Wharves">F - Market and Wharves</option>
+<option value="J - Church">J - Church</option>
+<option value="K - Ingleside">K - Ingleside</option>
+<option value="L - Taraval">L - Taraval</option>
+<option value="L - Owl - Taraval">L - Owl - Taraval</option>
+<option value="M - Ocean View">M - Ocean View</option>
+<option value="N - Judah">N - Judah</option>
+<option value="NX - Judah Express">NX - Judah Express</option>
+<option value="N - Owl - Judah">N - Owl - Judah</option>
+<option value="S - Shuttle Train">S - Shuttle Train</option>
+<option value="T - Third">T - Third</option>
+<option value="TM - Third/Ocean View">TM - Third/Ocean View</option>
+<option value="California Cable Car">California Cable Car</option>
+<option value="Powell/Hyde Cable Car">Powell/Hyde Cable Car</option>
+<option value="Powell/Mason Cable Car">Powell/Mason Cable Car</option>
+<option value="1 - California">1 - California</option>
+<option value="1AX - California &#39;A&#39; Express">1AX - California &#39;A&#39; Express</option>
+<option value="1BX - California &#39;B&#39; Express">1BX - California &#39;B&#39; Express</option>
+<option value="2 - Clement">2 - Clement</option>
+<option value="3 - Jackson">3 - Jackson</option>
+<option value="5 - Fulton">5 - Fulton</option>
+<option value="5R - Fulton Rapid">5R - Fulton Rapid</option>
+<option value="6 - Haight/Parnassus">6 - Haight/Parnassus</option>
+<option value="7 - Haight/Noriega">7 - Haight/Noriega</option>
+<option value="7X - Noriega Express">7X - Noriega Express</option>
+<option value="8 - Bayshore">8 - Bayshore</option>
+<option value="8AX - Bayshore &#39;A&#39; Express">8AX - Bayshore &#39;A&#39; Express</option>
+<option value="8BX - Bayshore &#39;B&#39; Express">8BX - Bayshore &#39;B&#39; Express</option>
+<option value="9 - San Bruno">9 - San Bruno</option>
+<option value="9R - San Bruno Rapid">9R - San Bruno Rapid</option>
+<option value="10 - Townsend">10 - Townsend</option>
+<option value="12 - Folsom/Pacific">12 - Folsom/Pacific</option>
+<option value="14 - Mission">14 - Mission</option>
+<option value="14R - Mission Rapid">14R - Mission Rapid</option>
+<option value="14X - Mission Express">14X - Mission Express</option>
+<option value="15 - Bayview-Hunters Point Express">15 - Bayview-Hunters Point Express</option>
+<option value="18 - 46th Avenue">18 - 46th Avenue</option>
+<option value="19 - Polk">19 - Polk</option>
+<option value="21 - Hayes">21 - Hayes</option>
+<option value="22 - Fillmore">22 - Fillmore</option>
+<option value="23 - Monterey">23 - Monterey</option>
+<option value="24 - Divisadero">24 - Divisadero</option>
+<option value="25 - Treasure Island">25 - Treasure Island</option>
+<option value="27 - Bryant">27 - Bryant</option>
+<option value="28 - 19th Avenue">28 - 19th Avenue</option>
+<option value="28R - 19th Avenue Rapid">28R - 19th Avenue Rapid</option>
+<option value="29 - Sunset">29 - Sunset</option>
+<option value="30 - Stockton">30 - Stockton</option>
+<option value="30X - Marina Express">30X - Marina Express</option>
+<option value="31 - Balboa">31 - Balboa</option>
+<option value="31AX - Balboa &#39;A&#39; Express">31AX - Balboa &#39;A&#39; Express</option>
+<option value="31BX - Balboa &#39;B&#39; Express">31BX - Balboa &#39;B&#39; Express</option>
+<option value="33 - Ashbury/18th">33 - Ashbury/18th</option>
+<option value="35 - Eureka">35 - Eureka</option>
+<option value="36 - Teresita">36 - Teresita</option>
+<option value="37 - Corbett">37 - Corbett</option>
+<option value="38 - Geary">38 - Geary</option>
+<option value="38R - Geary Rapid">38R - Geary Rapid</option>
+<option value="38AX - Geary &#39;A&#39; Express">38AX - Geary &#39;A&#39; Express</option>
+<option value="38BX - Geary &#39;B&#39; Express">38BX - Geary &#39;B&#39; Express</option>
+<option value="39 - Coit">39 - Coit</option>
+<option value="41 - Union">41 - Union</option>
+<option value="43 - Masonic">43 - Masonic</option>
+<option value="44 - O&#39;shaughnessy">44 - O&#39;shaughnessy</option>
+<option value="45 - Union/Stockton">45 - Union/Stockton</option>
+<option value="47 - Van Ness">47 - Van Ness</option>
+<option value="48 - Quintara/24th Street">48 - Quintara/24th Street</option>
+<option value="49 - Van Ness/Mission">49 - Van Ness/Mission</option>
+<option value="52 - Excelsior">52 - Excelsior</option>
+<option value="54 - Felton">54 - Felton</option>
+<option value="56 - Rutland">56 - Rutland</option>
+<option value="57 - Park Merced">57 - Park Merced</option>
+<option value="58 - Lake Merced">58 - Lake Merced</option>
+<option value="66 - Quintara">66 - Quintara</option>
+<option value="67 - Bernal Heights">67 - Bernal Heights</option>
+<option value="76X - Marin Headlands Express">76X - Marin Headlands Express</option>
+<option value="78X - 16th Street Arena Express">78X - 16th Street Arena Express</option>
+<option value="79X - Van Ness Arena Express">79X - Van Ness Arena Express</option>
+<option value="81X - Caltrain Express">81X - Caltrain Express</option>
+<option value="82X - Levi Plaza Express">82X - Levi Plaza Express</option>
+<option value="83X - Mid-Market Express">83X - Mid-Market Express</option>
+<option value="88 - BART Shuttle">88 - BART Shuttle</option>
+<option value="90 - San Bruno Owl">90 - San Bruno Owl</option>
+<option value="91 - Third St/19th Ave Owl">91 - Third St/19th Ave Owl</option>
+<option value="714 - BART Early Bird">714 - BART Early Bird</option>
+</select><br>
+
+Item Type:<select  id="00N5f000006oY0h" name="00N5f000006oY0h" title="Item Type"><option value="">--None--</option><option value="Backpack/Bag/Briefcase/Luggage">Backpack/Bag/Briefcase/Luggage</option>
+<option value="Bicycle/Roller Blades/Skates/Skateboard">Bicycle/Roller Blades/Skates/Skateboard</option>
+<option value="Book(s)">Book(s)</option>
+<option value="Camera and Accessories">Camera and Accessories</option>
+<option value="Case(s)/Container(s)/Lunch Box">Case(s)/Container(s)/Lunch Box</option>
+<option value="Cell Phone/Electronics/Media">Cell Phone/Electronics/Media</option>
+<option value="Clothing">Clothing</option>
+<option value="Envelope/Folder/Notebook">Envelope/Folder/Notebook</option>
+<option value="Eyeglasses">Eyeglasses</option>
+<option value="Identification/Sensitive Documents/Transit Pass">Identification/Sensitive Documents/Transit Pass</option>
+<option value="Jewelry/Watch">Jewelry/Watch</option>
+<option value="Key(s)">Key(s)</option>
+<option value="Medical Equipment/Medication">Medical Equipment/Medication</option>
+<option value="Musical Instrument">Musical Instrument</option>
+<option value="Sports Equipment">Sports Equipment</option>
+<option value="Umbrella">Umbrella</option>
+<option value="Wallet/Purse/Card Holder/Checkbook">Wallet/Purse/Card Holder/Checkbook</option>
+<option value="All Other Items (not listed above)">All Other Items (not listed above)</option>
+</select><br>
+
+Item Detail:<select  id="00N5f000006oY1B" name="00N5f000006oY1B" title="Item Detail"><option value="">--None--</option><option value="Backpack">Backpack</option>
+<option value="Fannypack">Fannypack</option>
+<option value="Briefcase">Briefcase</option>
+<option value="Messenger Bag">Messenger Bag</option>
+<option value="Satchel">Satchel</option>
+<option value="Cosmetic Bag/Case">Cosmetic Bag/Case</option>
+<option value="Duffel or Gym Bag">Duffel or Gym Bag</option>
+<option value="Luggage">Luggage</option>
+<option value="Paper or Plastic Bag">Paper or Plastic Bag</option>
+<option value="Tote Bag">Tote Bag</option>
+<option value="Children&#39;s Bicycle">Children&#39;s Bicycle</option>
+<option value="Men&#39;s Bicycle">Men&#39;s Bicycle</option>
+<option value="Women&#39;s Bicycle">Women&#39;s Bicycle</option>
+<option value="Roller Blades or Skates">Roller Blades or Skates</option>
+<option value="Skateboard">Skateboard</option>
+<option value="Scooter">Scooter</option>
+<option value="Public Library Book(s)">Public Library Book(s)</option>
+<option value="School/Text Book(s)">School/Text Book(s)</option>
+<option value="Hard Cover">Hard Cover</option>
+<option value="Paperback">Paperback</option>
+<option value="Camcorder">Camcorder</option>
+<option value="Digital Camera">Digital Camera</option>
+<option value="Film Camera">Film Camera</option>
+<option value="Single-Use Camera">Single-Use Camera</option>
+<option value="Tripod/Accessories">Tripod/Accessories</option>
+<option value="Case(s)/Container(s)/Box(es)">Case(s)/Container(s)/Box(es)</option>
+<option value="Lunch Box or Bag">Lunch Box or Bag</option>
+<option value="CD/DVD">CD/DVD</option>
+<option value="Cell Phone">Cell Phone</option>
+<option value="Laptop">Laptop</option>
+<option value="Media Player">Media Player</option>
+<option value="Media Storage Device">Media Storage Device</option>
+<option value="Tablet/eReader">Tablet/eReader</option>
+<option value="Cap/Hat">Cap/Hat</option>
+<option value="Helmet">Helmet</option>
+<option value="Coat">Coat</option>
+<option value="Dress">Dress</option>
+<option value="Skirt">Skirt</option>
+<option value="Gloves/Mittens">Gloves/Mittens</option>
+<option value="Pants">Pants</option>
+<option value="Scarf/Shawl">Scarf/Shawl</option>
+<option value="Shirt/Blouse">Shirt/Blouse</option>
+<option value="Shoes/Footware">Shoes/Footware</option>
+<option value="Suit">Suit</option>
+<option value="Sweater/Sweatshirt">Sweater/Sweatshirt</option>
+<option value="Swim Wear">Swim Wear</option>
+<option value="Undergarments">Undergarments</option>
+<option value="Binder/Folder">Binder/Folder</option>
+<option value="Art Portfolio">Art Portfolio</option>
+<option value="Envelope(s)">Envelope(s)</option>
+<option value="Notebook(s)">Notebook(s)</option>
+<option value="Planner/Organizer">Planner/Organizer</option>
+<option value="Prescription/Reading Glasses">Prescription/Reading Glasses</option>
+<option value="Sunglasses">Sunglasses</option>
+<option value="Driver&#39;s License">Driver&#39;s License</option>
+<option value="Employee ID or Badge">Employee ID or Badge</option>
+<option value="Identification Card">Identification Card</option>
+<option value="Passport">Passport</option>
+<option value="Sensitive Documents">Sensitive Documents</option>
+<option value="Social Security Card">Social Security Card</option>
+<option value="Transit Pass">Transit Pass</option>
+<option value="Bracelet">Bracelet</option>
+<option value="Brooch/Pin">Brooch/Pin</option>
+<option value="Earring(s)">Earring(s)</option>
+<option value="Necklace/Pendant">Necklace/Pendant</option>
+<option value="Ring(s)">Ring(s)</option>
+<option value="Wrist or Pocket Watch">Wrist or Pocket Watch</option>
+<option value="Key(s)">Key(s)</option>
+<option value="Cane">Cane</option>
+<option value="Crutches">Crutches</option>
+<option value="Dentures/Retainer/Other Dental">Dentures/Retainer/Other Dental</option>
+<option value="Diabetes Kit">Diabetes Kit</option>
+<option value="Hearing Aid">Hearing Aid</option>
+<option value="Medication - specify type below">Medication - specify type below</option>
+<option value="Compact">Compact</option>
+<option value="Full Size">Full Size</option>
+<option value="Card Holder">Card Holder</option>
+<option value="Checkbook/Checks">Checkbook/Checks</option>
+<option value="Coin Pouch">Coin Pouch</option>
+<option value="Purse/Handbag">Purse/Handbag</option>
+<option value="Wallet">Wallet</option>
+<option value="Specify Details Below">Specify Details Below</option>
+<option value="Other - Specify Detail Below">Other - Specify Detail Below</option>
+</select><br>
+
+Brand:<input  id="00N5f000006oY1Q" maxlength="50" name="00N5f000006oY1Q" size="20" type="text" /><br>
+
+Color:<select  id="00N5f000006oY1k" name="00N5f000006oY1k" title="Color"><option value="">--None--</option><option value="Aqua/Blue-Green">Aqua/Blue-Green</option>
+<option value="Beige/Tan">Beige/Tan</option>
+<option value="Black">Black</option>
+<option value="Blue">Blue</option>
+<option value="Brown">Brown</option>
+<option value="Gold">Gold</option>
+<option value="Gray">Gray</option>
+<option value="Green">Green</option>
+<option value="Orange">Orange</option>
+<option value="Pink">Pink</option>
+<option value="Purple/Violet">Purple/Violet</option>
+<option value="Red">Red</option>
+<option value="Silver">Silver</option>
+<option value="Turquoise">Turquoise</option>
+<option value="White">White</option>
+<option value="Yellow">Yellow</option>
+<option value="Transparent/Translucent">Transparent/Translucent</option>
+<option value="Other - enter in Details below">Other - enter in Details below</option>
+</select><br>
+
+<input type="submit" name="submit">
+
+</form>
+
+  </body>
+</html>
+
